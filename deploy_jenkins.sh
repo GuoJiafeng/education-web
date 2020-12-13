@@ -13,11 +13,11 @@ yarn build
 
 
 # 创建新镜像
-docker build -t gjf/web . && \
+docker build -t gjf/admin . && \
 
-docker stop web
+docker stop admin
 
-docker rm web
+docker rm admin
 
 # 使用 docker stack 启动服务
-docker run --name web -d -p 800:80  gjf/web
+docker run --name admin -d -p 801:80  gjf/admin
