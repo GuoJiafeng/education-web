@@ -11,12 +11,14 @@ yarn exec node install.js
 # 安装项目中的依赖
 ##yarn
 cd ..
+
+cd ..
 # 打包
 yarn build
 
 
 # 创建新镜像
-docker build -t gjf/web ./node_modules && \
+docker build -t gjf/web . && \
 
 docker stop web
 
