@@ -1,4 +1,5 @@
 export PATH=/root/node-v12.8.1-linux-x64/bin:$PATH
+
 yarn config set puppeteer_download_host https://npm.taobao.org/mirrors
 
 yarn add puppeteer --ignore-scripts
@@ -14,13 +15,12 @@ cd ..
 yarn build
 
 
-
 # 创建新镜像
-docker build -t gjf/admin . && \
+docker build -t gjf/web . && \
 
-docker stop admin
+docker stop web
 
-docker rm admin
+docker rm web
 
 # 使用 docker stack 启动服务
-docker run --name admin -d -p 801:80  gjf/admin
+docker run --name web -d -p 800:80  gjf/web
