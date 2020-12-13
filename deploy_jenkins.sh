@@ -16,7 +16,7 @@ yarn build
 
 
 # 创建新镜像
-docker build -t gjf/web . && \
+docker build -t gjf/web ./node_modules && \
 
 docker stop web
 
